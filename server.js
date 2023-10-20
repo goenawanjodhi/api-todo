@@ -15,6 +15,9 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
+app.get('/', (req, res) => {
+    res.json({ message: 'API RUNNING,,,' });
+})
 app.use('/api/todo', require('./routers/todoRoute'));
 
 app.listen(port, () => {
